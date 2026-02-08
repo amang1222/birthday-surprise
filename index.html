@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Bachha ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+      color:#fff;
+      text-align:center;
+    }
+    .lock{
+      position:fixed;inset:0;
+      background:#000;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      z-index:10;
+    }
+    .lock input{
+      padding:12px;
+      border-radius:8px;
+      border:none;
+      font-size:16px;
+      text-align:center;
+      margin-top:10px;
+    }
+    .lock button{
+      margin-top:15px;
+      padding:10px 25px;
+      border:none;
+      border-radius:20px;
+      background:#ff4d6d;
+      color:#fff;
+      font-size:16px;
+    }
+    h1{
+      font-family:'Great Vibes',cursive;
+      font-size:46px;
+      margin:30px 10px;
+    }
+    .type{
+      width:90%;max-width:900px;
+      margin:20px auto;
+      font-size:18px;
+      line-height:1.9;
+      white-space:pre-line;
+    }
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+      padding:20px;
+    }
+    .card{
+      background:rgba(255,255,255,0.15);
+      padding:15px;
+      border-radius:20px;
+    }
+    .card img{
+      width:100%;
+      height:auto;
+      border-radius:15px;
+    }
+    .cake{margin:40px}
+    .cake button{
+      padding:12px 30px;
+      font-size:18px;
+      border:none;
+      border-radius:25px;
+      background:#ff4d6d;
+      color:#fff;
+    }
+    audio{display:none}
+  </style>
+</head>
+<body>
+
+<div class="lock" id="lock">
+  <h1>For My Bachha ❤️</h1>
+  <p>Enter Password</p>
+  <input id="pass" type="password" placeholder="Password" />
+  <button onclick="unlock()">Unlock Surprise 🎁</button>
+</div>
+
+<audio id="music" src="song.mp3" loop></audio>
+
+<h1>Happy Birthday Bachha 🎂</h1>
+
+<div class="type" id="type"></div>
+
+<div class="gallery">
+  <div class="card"><img src="photo1.jpg"><p>In my eyes, there is no one more beautiful than you in this world 🧿🫀♥️🫂🤌</p></div>
+  <div class="card"><img src="photo2.jpg"><p>I miss this hug everyday, every moment 🥺. There is no other place in the world where I can find a hug like this — never ♥️🥺🫂</p></div>
+  <div class="card"><img src="photo3.jpg"><p>The moment I looked at you, that smile automatically appeared on my face, and every second I just wanted to keep you right in front of my eyes 🧿♥️🫂</p></div>
+  <div class="card"><img src="photo4.jpg"><p>This is when we promised each other that we would never leave each other — never ♾️🤞. I really miss those days 🥺🫂♥️</p></div>
+  <div class="card"><img src="photo5.jpg"><p>This was our last day in college, Bachha, and I miss it so much. From that very day, our long distance journey began. I wanted to stop that day forever ♾️🫂♥️🤞🧿</p></div>
+  <div class="card"><img src="photo6.jpg"><p>You're the most beautiful girl in the world, Bachha ♥️🧿🫂😘<br>I love you, mera Bachha ♥️🧿🫀😘🫂</p></div>
+</div>
+
+<div class="cake">
+  <button onclick="alert('🎉 Happy Birthday Bachha 🎉')">Cut the Cake 🎂</button>
+</div>
+
+<script>
+const message = `Wishing you the happiest birthday to the most beautiful girl in the world 🎂🧿♥️♾️🫂\n\nMy love, today is your birthday, and honestly, my heart feels a little heavy 🥺 because on this special day, I’m not there beside you. But no matter how much distance separates us, my heart stays with you every second, always and forever ♾️🫂♥️🫀\n\nYou are that part of my life without which I can’t even imagine my existence.\n\nYour smile — truly the most beautiful smile in the world — has a magic that no one else has 🤌😘♥️\n\nThe truth is, Bachha, I never want to stay away from you. This distance keeps troubling me, teasing my heart every single day. All I want is to be close to you.\n\nWhenever I’m full of self-doubt or confusion, you patiently explain things to me like a child, you support me, you hold me together 🥺\n\nYou are not just my girlfriend. You are my safe place, my motivation, and the most beautiful part of my life.\n\nOnce again, Happy Birthday my precious Bachha, my love ♥️🧿🫂🎂🥂\n\n— Aman`;
+
+let i=0;
+function typeEffect(){
+  if(i<message.length){
+    document.getElementById('type').innerHTML+=message.charAt(i);
+    i++;
+    setTimeout(typeEffect,35);
+  }
+}
+
+function unlock(){
+  if(document.getElementById('pass').value==='amanbachha'){
+    document.getElementById('lock').style.display='none';
+    document.getElementById('music').play();
+    typeEffect();
+  }else{
+    alert('Wrong password 🥺');
+  }
+}
+</script>
+
+</body>
+</html>
